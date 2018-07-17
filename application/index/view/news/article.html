@@ -1,0 +1,282 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>铁汉生态关于与深圳爱淘苗电子商务科技有限公司签署《铁汉生态招标采购平台软件开发及_深圳市创新梦想科技有限公司</title>
+    <meta name="keywords" content="深圳APP开发公司" />
+    <meta name="description" content="通过此次招采平台的搭建实现公司所有采购在互联网上直接在线招投标，并在线完成定价、深圳 APP开发公司 合同生成、验收、 深圳APP开发 公司支付等采购过程，有助于公司降低采购成本、优化公司采购流程，符合公司实际经营需要，本次关联" />
+
+    <script language="javascript">
+        msg = "铁汉生态关于与深圳爱淘苗电子商务科技有限公司签署《铁汉生态招标采购平台软件开发及_深圳市创新梦想科技有限公司";
+
+        msg = "" + msg;pos = 0;
+        function scrollMSG() {
+            document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+            pos++;
+            if (pos >  msg.length) pos = 0
+            window.setTimeout("scrollMSG()",200);
+        }
+        scrollMSG();
+    </script>
+
+    {include file="common/meta" /}
+</head>
+<body>
+{include file="common/head" /}
+<!-- 整个头部 end-->
+<div class="confont-con  clearfix">
+    <!--左边的导航列表-->
+    <div class="confont-left  pull-left">
+        <dl class="confont-left-top">
+            <!-- 	5 -->
+            <dt><i class="iconfont"></i>新闻中心</dt>
+
+
+            <dd id="公司动态">
+                <a href="/plus/list.php?tid=14"><span class="iconfont fsize-20 mr-5"></span>公司动态</a>
+            </dd>
+
+
+            <dd id="项目案例">
+                <a href="/plus/list.php?tid=15"><span class="iconfont fsize-20 mr-5"></span>项目案例</a>
+            </dd>
+
+
+            <dd id="员工风采">
+                <a href="/plus/list.php?tid=16"><span class="iconfont fsize-20 mr-5"></span>员工风采</a>
+            </dd>
+
+
+            <dd id="业界动态">
+                <a href="/plus/list.php?tid=17"><span class="iconfont fsize-20 mr-5"></span>业界动态</a>
+            </dd>
+
+
+            <dd id="最新公告">
+                <a href="/plus/list.php?tid=18"><span class="iconfont fsize-20 mr-5"></span>最新公告</a>
+            </dd>
+
+
+
+        </dl>
+
+        <dl class="mt-20">
+            <dt><i class="iconfont fcolor-66"></i>联系我们</dt>
+            <dd class="center h-100"><p class="pt-20 fcolor-66">了解更多详细信息请致电</p><b class="fsize-28 lh-50 fcolor-99">4000-670-790</b></dd>
+            <dd class="center h-80 hr-db-gray-4 po-re">
+                <p class="lh-30 fcolor-66 pt-5 pb-5">或给我们留言</p>
+                <img class=" pull-left pl-50 pr-5" src="/templets/htm/style/images/QQ_icon.png" width="24">
+                <span onClick="location.href=('http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes')"  class="btn-button-gb-blue  pr-10 pl-10 di-ib pull-left">在线留言</span>
+            </dd>
+        </dl>
+
+    </div>		<!--左边结束-->
+    <!--右边的内容-->
+    <div class="confont-right pull-right">
+        <!--详情页头部-->
+        <div class="h-50 lh-50 clearfix hr-sb-gray1">
+            <div class="confont-next">
+                <p>
+                    <i class="iconfont"></i>您所在的位置：
+                    <a href='http://www.cxmx90.com/'>首页</a> > <a href='/plus/list.php?tid=5'>新闻中心</a> > <a href='/plus/list.php?tid=14'>公司动态</a> >  					</p>
+            </div>
+        </div><!--详情页头部结束-->
+        <div class="news-list-infoTxtcon">
+            <h1>{$data.name}</h1>
+            <h6>
+                <i class="iconfont fcolor-99 fsize-12"></i>作者：{$data.author}					<i class="iconfont fcolor-99 fsize-12"></i>点击量：{$data.look}
+                <script src="/plus/count.php?view=yes&aid=468&mid=1"type='text/javascript' language="javascript"></script></span>
+                <i class="iconfont fcolor-99 fsize-12"></i>{$data.createtime}				</h6>
+            <div class="title-head" style="line-height:26px; color:#666;">
+                <span>内容导读：</span>
+                <?php echo mb_substr(strip_tags(html_entity_decode($data['maincontent'])),0,60); ?>	</div>
+            <br>
+                {$data.maincontent}
+        <!-- 本文关键字开始   -->
+        <div class="lh-25em fcolor-66 mt-30">
+            本文关键字：
+
+
+
+
+        </div>
+        <!-- 本文关键字结束 -->
+        <div class="lh-2em fcolor-66">
+            上一篇：
+            {switch name="up" }
+            {case value="" }没有了{/case}
+            {default /}<a href="{:url('Index/News/article',array('id'=>$up.id))}">{$up.name}</a> <br>
+            {/switch}
+            下一篇：
+            {switch name="down" }
+            {case value="" }没有了{/case}
+            {default /}<a href="{:url('Index/News/article',array('id'=>$down.id))}">{$down.name}</a> <br>
+            {/switch}
+            <!-- 评论 -->
+            <div>
+                <div style="width:100%; height:20px; overflow:hidden; clear:both;"></div>
+            </div><!-- 评论end -->
+        </div>
+        <!--右边内容结束-->
+    </div>
+</div>
+
+<div class="go-top">
+    <div class="before-icon">
+        <div onClick="boxOs()">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes"><i class="iconfont"></i></a>
+        </div>
+        <div onClick="boxOs()">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes"><i class="iconfont"></i></a>
+        </div>
+        <div>
+            <i class="iconfont"></i>
+        </div>
+        <div onClick="window.open('/plus/list.php?tid=49')">
+            <i class="iconfont"></i>
+        </div>
+        <div>
+            <a href="javascript:scroll(0,0)">
+                <i class="iconfont"></i>
+            </a>
+        </div>
+    </div>
+    <div class="after-con">
+        <div class="st">
+            <img src="/templets/htm/style/images/qq.png" width="24" >
+            业务咨询<br>咨询在线客服
+        </div>
+        <div class="sp">
+            <img src="/templets/htm/style/images/qq.png" width="24" >
+            合作咨询<br>咨询在线客服
+        </div>
+        <div class="erweima">
+            <div>
+                <img src="/templets/htm/style/images/erweima.png" width="98" height="98">
+                <p>我们的微信</p>
+            </div>
+            <div>
+                <img src="/templets/htm/style/images/erweima_weibo.png" width="98" height="98">
+                <P>我们的微博</P>
+            </div>
+        </div>
+        <div class="help">
+            点击图标进入帮助中心
+        </div>
+        <!--<div class="di-n">
+      <a href="javascript:scroll(0,0)"><i class="iconfont"></i></a>
+      </div>-->
+    </div>
+</div>
+
+
+<div class="confont-bottom3 clearfix">
+    <div class="confont-con">
+        <div class="pt-30 di-ib">
+            <img src="/templets/htm/style/images/logo_bottom.png" width="300px">
+        </div>
+        <div class="pt-30 pull-right">
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=7">关于梦想</a></dt>
+                <dd><a href="#">资质荣耀</a></dd>
+                <dd><a href="/plus/list.php?tid=45">联系我们</a></dd>
+                <dd><a href="/plus/list.php?tid=44">招贤纳士</a></dd>
+            </dl>
+
+            <!--<dl class="bottom-list">
+                 <dt><a href="http://www.szcxmx.com/plus/list.php?tid=46">合作加盟</a></dt>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70802">合作优势</a></dd>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70803">合作流程</a></dd>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70805">伙伴查询</a></dd>
+             </dl>-->
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=4">支持中心</a></dt>
+                <dd><a href="/plus/list.php?tid=47">服务体系</a></dd>
+                <dd><a href="/plus/list.php?tid=49">知识中心</a></dd>
+                <dd><a href="/plus/list.php?tid=50">下载中心</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a >站点地图</a></dt>
+                <dd><a href="">TAG标签</a></dd>
+                <dd><a >RSS标签</a></dd>
+                <dd><a href="">专题列表</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=3">定制开发服务</a></dt>
+                <dd><a href="/plus/list.php?tid=8">软件定制开发</a></dd>
+                <dd><a href="/plus/list.php?tid=9">APP定制开发</a></dd>
+                <dd><a href="/plus/list.php?tid=10">微信/支付宝开发</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=2">创新标准产品</a></dt>
+                <dd><a href="/plus/list.php?tid=2">软件标准产品</a></dd>
+                <dd><a href="/plus/list.php?tid=2">APP标准产品</a></dd>
+                <dd><a href="/plus/list.php?tid=2">VIP+免费软件</a></dd>
+            </dl>
+            <dl class="bottom-list  mr-0" id="bottomList">
+                <dd class="center">
+                    <a >
+                        <img src="/templets/htm/style/images/weixin.png" width="15" class="pull-left mt-5">
+                        我们的微信
+                    </a>
+                    <div class="di-n">
+                        <img src="/templets/htm/style/images/erweima.png" width="90">
+                        <p class="fsize-12">扫描关注微信</p>
+                    </div>
+                </dd>
+                <dd class="center">
+                    <a >
+                        <img src="/templets/htm/style/images/weibo.png" width="15" height="14" class="pull-left mt-5">
+                        我们的微博
+                    </a>
+                    <div class="di-n">
+                        <img src="/templets/htm/style/images/erweima_weibo.png" width="90">
+                        <p class="fsize-12">扫描微博交流</p>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="bottom-footer-pr">
+            <div class="confont-con lh-2em">
+                <span class="mr-30 fcolor-66 fsize-12">地址：深圳市宝安区西乡银田工业区元匠坊4楼</span><br/>
+                <span class="mr-30 fcolor-66 fsize-12">咨询热线：4000-670-790    0755-33150819</span><br/>
+                <span class="mr-30 fcolor-66 fsize-12">客服热线：18820152035</span>
+            </div>
+            <!--     <div class="hr-sb-gray1 mt-5 mb-5"></div> -->
+            <div class="confont-con lh-2em pt-10">
+                <p class="fcolor-66 fsize-12 di-i">Copyright © 2015-2018 CXMX Software Co.,Ltd All Rights Reserved <span class="fcolor-f4"><a href="http://admin.simpro.cn/sim_mana.php" target="_blank" rel="nofollow"><span class="fcolor-f4">管理入口</span></a></span>
+                </p>
+                <p class="fcolor-66  fsize-12">
+                    软件企业编号：粤B-2015-0305 | 中国电子商务协会会员 | 软件行业协会会员 | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备17038158号</a> |  <a href="http://www.cxmx90.com/plus/list.php?tid=3" target="_blank">软件定制开发</a> | <a href="http://www.cxmx90.com/" target="_blank">深圳软件开发</a>  |<a href="http://www.cxmx90.com/sitemap.html" target="_blank">网站地图</a> | <a href="http://www.cxmx90.com/sitemap.xml" target="_blank">XML地图</a>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<<!-- 城市选择器 -->
+<script src="__ROOT__/public/assets/js/jquery-1.11.1.js"></script>
+<script src="__ROOT__/public/assets/js/jquery-1.8.3.min.js"></script>
+<script src="__ROOT__/public/assets/js/city.js"></script>
+<script src="__ROOT__/public/assets/js/jquery.autocomplete.js"></script>
+<script src="__ROOT__/public/assets/js/city_style.js"></script>
+
+<!-- 城市选择器end -->
+<script src="__ROOT__/public/assets/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="__ROOT__/public/assets/js/sp_homepage.js"></script>
+
+
+
+<script type="text/javascript">
+    $(function()
+    {
+        $('#公司动态').addClass('active');
+    });
+</script>
+
+</body>
+</html>

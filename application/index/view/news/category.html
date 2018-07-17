@@ -1,0 +1,401 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>新闻中心  /  公司动态_深圳市创新梦想科技有限公司</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+
+    <script language="javascript">
+        msg = "新闻中心  /  公司动态_深圳市创新梦想科技有限公司";
+
+        msg = "" + msg;pos = 0;
+        function scrollMSG() {
+            document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+            pos++;
+            if (pos >  msg.length) pos = 0
+            window.setTimeout("scrollMSG()",200);
+        }
+        scrollMSG();
+    </script>
+    {include file="common/meta" /}
+</head>
+<body>
+{include file="common/head" /}
+<!-- 整个头部 end-->
+<div class="confont-con  clearfix">
+    <!--左边的导航列表-->
+    <div class="confont-left  pull-left">
+        <dl class="confont-left-top">
+            <!-- 	5 -->
+            <dt><i class="iconfont"></i>新闻中心</dt>
+
+
+            <dd id="公司动态">
+                <a href="{:url('Index/News/category',array('id'=>1))}"><span class="iconfont fsize-20 mr-5"></span>公司动态</a>
+            </dd>
+
+
+            <dd id="项目案例">
+                <a href="{:url('Index/News/category',array('id'=>2))}"><span class="iconfont fsize-20 mr-5"></span>项目案例</a>
+            </dd>
+
+
+            <dd id="员工风采">
+                <a href="{:url('Index/News/category',array('id'=>3))}"><span class="iconfont fsize-20 mr-5"></span>员工风采</a>
+            </dd>
+
+
+            <dd id="业界动态">
+                <a href="{:url('Index/News/category',array('id'=>4))}"><span class="iconfont fsize-20 mr-5"></span>业界动态</a>
+            </dd>
+
+
+            <dd id="最新公告">
+                <a href="{:url('Index/News/category',array('id'=>5))}"><span class="iconfont fsize-20 mr-5"></span>最新公告</a>
+            </dd>
+
+
+
+        </dl>
+
+        <dl class="mt-20">
+            <dt><i class="iconfont fcolor-66"></i>联系我们</dt>
+            <dd class="center h-100"><p class="pt-20 fcolor-66">了解更多详细信息请致电</p><b class="fsize-28 lh-50 fcolor-99">4000-670-790</b></dd>
+            <dd class="center h-80 hr-db-gray-4 po-re">
+                <p class="lh-30 fcolor-66 pt-5 pb-5">或给我们留言</p>
+                <img class=" pull-left pl-50 pr-5" src="__ROOT__/public/assets/images/QQ_icon.png" width="24">
+                <span onClick="location.href=('http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes')"  class="btn-button-gb-blue  pr-10 pl-10 di-ib pull-left">在线留言</span>
+            </dd>
+        </dl>
+
+    </div>	    <!--左边结束-->
+    <!--右边的内容-->
+    <div class="confont-right pull-right">
+        <!--栏目页头部-->
+        <div class="h-50 lh-50 clearfix">
+            <div class="pull-left fcolor-blue2 fsize-18"><i class="iconfont fsize-28 fweight-900 pull-left fcolor-yellow mr-5"></i>
+                {$menu.name}		</div>
+            <div class="confont-next pull-right">
+                <p><i class="iconfont"></i>您所在的位置：<a href='http://www.cxmx90.com/'>首页</a> > <a href='/plus/list.php?tid=5'>新闻中心</a> > <a href='/plus/list.php?tid=14'>{$menu.name}</a> > </p>
+            </div>
+        </div><!--栏目页头部结束-->
+        <!--栏目页头部banner不轮播-->
+        <div class="po-re list-top-banner">
+            <div class="po-ab"><img src="__ROOT__/public/assets/images/product_header.png" width="940px" height="250px"></div>
+            <div class="po-ab pt-20 pb-10 pl-25 pr-25">
+                <div class=" clearfix">
+                    <img src="__ROOT__/public/assets/images/product_header_img.png" width="60px" class="pull-left mr-20">
+                    <h2 class="fsize-30 fcolor-white pull-left lh-2em">{$menu.name}</h2>
+                </div>
+                <div class=" pl-80 w-450">
+                    <p class="fcolor-white">{$menu.content}</p>
+                    <div class=" mt-35 clearfix">
+
+                        <a href="/plus/list.php?tid=4" class="pl-25 pr-25 pt-10 pb-10 fsize-14 pull-left fcolor-white mr-30">服务支持</a>
+
+                        <a href="/plus/list.php?tid=7" class="pl-25 pr-25 pt-10 pb-10 fsize-14 pull-left fcolor-white">关于梦想</a>
+
+                    </div>
+                </div>
+            </div>
+        </div><!--栏目页头部banner不轮播结束-->
+        <!--栏目页标题-->
+        <div class="h-70 lh-70 ">
+            <span class="hr-dl-yellow-4 pl-10 lh-26 di-ib fsize-18">{$menu.name}</span>
+        </div><!--end-->
+        <div class="news-list-info">
+            <ul>
+                {volist name="data" id="d"}
+
+                <li class="mb-30 clearfix">
+                    <a href="/news/company/2018/0707/468.html" title="<?php echo mb_substr(strip_tags(html_entity_decode($d['name'])),0,30); ?>">
+                        <div class="hr-s-gray1  over-h  pull-left center" >
+                            <img src="__ROOT__/Public/{$d.img}" width="170" height="125">
+                        </div>
+                        <div class="lh-2em pull-right w-720 ">
+                            <h2 class="fcolor-blue2 fsize-18 fweight-100"><?php echo mb_substr(strip_tags(html_entity_decode($d['name'])),0,30); ?></h2>
+                            <p class="fcolor-66 fsize-12"><i class="iconfont"></i>{$d.createtime}</p>
+                            <p class="fcolor-66"><?php echo mb_substr(strip_tags(html_entity_decode($d['maincontent'])),0,60); ?>.. </p>
+                        </div>
+                    </a>
+                </li>
+
+                {/volist}
+
+
+                <!--<li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0707/467.html" title="美食app软件开发需要社交性吗">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180707/11202Cc4-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">美食app软件开发需要社交性吗</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-07-07 11:20:24</p>-->
+                        <!--<p class="fcolor-66">美食app开发可以说是餐饮企业在互联网的名片， 深圳微信开发 不仅可以为企业增加更多的新客户，还可以大大提高企业的品牌形象，开发一款美食app确实是不错的抉择。 深圳微信开发 ，美食app开发要注重社 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0701/460.html" title="深圳诈骗团伙研发“对赌软件”450名民警雷霆出击刑拘249名嫌犯">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180701/0933201441-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">深圳诈骗团伙研发“对赌软件”450名民警雷霆出击刑拘249名嫌犯</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-07-01 09:33:17</p>-->
+                        <!--<p class="fcolor-66">警察！原位站起来双手抱头！不许动任何设备！民警对办公室内的人员喊道，并迅速控制办公室大门和主要机位。面对突然出现的警察，所有人都是一怔，随后大部分人乖乖地举起双手抱住了头。 13日上午9时 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0701/459.html" title="2018软件开发你应该学会的一项技能">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180701/0933125448-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">2018软件开发你应该学会的一项技能</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-07-01 09:33:09</p>-->
+                        <!--<p class="fcolor-66">思考，是人之所以为人的行为，而编程是一种对人的思考进行再思考的行为。深圳接码平台在编程时，我们只有在想清楚之后，才能把程序写出来。在编写正确、高效、深圳接码平台优雅的程序的同时，我们 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0626/452.html" title="深圳软件开发公司经营范围_【真实案例】">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/images/defaultpic.gif" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">深圳软件开发公司经营范围_【真实案例】</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-26 13:44:56</p>-->
+                        <!--<p class="fcolor-66">软件开发公司 经营范围包括计算机软件的开发、 深圳软件开发 计算机软件设计、计算机软件制作、计算机软件测试;计算机软件销售自产产品;并提供相关技术咨询、技术服务，计算机维修，计算机系统集成， ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0626/451.html" title="深圳软件开发培训机构哪家好？">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/images/defaultpic.gif" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">深圳软件开发培训机构哪家好？</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-26 13:44:41</p>-->
+                        <!--<p class="fcolor-66">近几年来，IT行业的用人需求日益增长，而其中以软件开发人才*为紧缺，目前每年的人才缺口已经达到上百万。 高考志愿填报指导 ， 恩颂校区专业老师指出，软件开发工程师就业空间广、深圳接码软件发展 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0621/444.html" title="铁汉生态：华创证券有限责任公司关于公司与深圳爱淘苗电子商务科技有限公司">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180621/133P22500-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">铁汉生态：华创证券有限责任公司关于公司与深圳爱淘苗电子商务科技有限公司</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-21 13:37:58</p>-->
+                        <!--<p class="fcolor-66">除本次交易外，本年年初至披露日公司与爱淘苗累计已发生的各类关联交易的总金额为 2.57 万元。 虚拟服务器租赁费 8 万元/年；软件开发费用 180 万元整，按十年期限均摊支付，每年支付 18 万元；系统技术支 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0621/443.html" title="首届彩电软件开发者峰会在深圳举行">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/images/defaultpic.gif" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">首届彩电软件开发者峰会在深圳举行</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-21 13:37:49</p>-->
+                        <!--<p class="fcolor-66">家电业内专家人士在接受记者采访时表示，智能电视是彩电行业发展的必然趋势，只不过消费者被目前国内所谓的互联网电视所误导，它们基本上只是捆绑固定的内容和应用，深圳接码平台深圳接码平台不具 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0617/438.html" title="深圳软件定制开发公司有哪些？">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180617/21023331R-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">深圳软件定制开发公司有哪些？</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-17 21:02:29</p>-->
+                        <!--<p class="fcolor-66">然当，司远远不止达普信这一家深圳的软件定造开辟公。参考、多方权衡、多地调查企业正在进行取舍时可多家， 深圳软件开发 对人选，深圳软件开发作对事才能，才能敏捷胀短一半你与顺利的距离。 信的 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li><li class="mb-30 clearfix">-->
+                <!--<a href="/news/company/2018/0617/437.html" title="深圳“车来了”软件开发公司 多人涉窃取数据被批捕">-->
+                    <!--<div class="hr-s-gray1  over-h  pull-left center" >-->
+                        <!--<img src="/uploads/allimg/180617/210223ED-0-lp.jpg" width="170" height="125">-->
+                    <!--</div>-->
+                    <!--<div class="lh-2em pull-right w-720 ">-->
+                        <!--<h2 class="fcolor-blue2 fsize-18 fweight-100">深圳“车来了”软件开发公司 多人涉窃取数据被批捕</h2>-->
+                        <!--<p class="fcolor-66 fsize-12"><i class="iconfont"></i>2018-06-17 21:02:15</p>-->
+                        <!--<p class="fcolor-66">软件酷米客后台数据由于涉嫌窃与公交及时，工日前被深圳市南山区查察院核准拘系包罗车来了CEO正在内的多名员。发公司侵权案件刑事立案的案件这是国内首起以及时公交软件开，深圳接码软件不小的震撼 ... </p>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+
+
+            </ul>
+        </div>
+        <!--翻页布局-->
+        <div id="pages" class="next"   >
+            {$page}
+        </div>
+    </div><!--右边内容结束-->
+</div>
+
+<div class="go-top">
+    <div class="before-icon">
+        <div onClick="boxOs()">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes"><i class="iconfont"></i></a>
+        </div>
+        <div onClick="boxOs()">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3355820677&site=qq&menu=yes"><i class="iconfont"></i></a>
+        </div>
+        <div>
+            <i class="iconfont"></i>
+        </div>
+        <div onClick="window.open('/plus/list.php?tid=49')">
+            <i class="iconfont"></i>
+        </div>
+        <div>
+            <a href="javascript:scroll(0,0)">
+                <i class="iconfont"></i>
+            </a>
+        </div>
+    </div>
+    <div class="after-con">
+        <div class="st">
+            <img src="__ROOT__/public/assets/images/qq.png" width="24" >
+            业务咨询<br>咨询在线客服
+        </div>
+        <div class="sp">
+            <img src="__ROOT__/public/assets/images/qq.png" width="24" >
+            合作咨询<br>咨询在线客服
+        </div>
+        <div class="erweima">
+            <div>
+                <img src="__ROOT__/public/assets/images/erweima.png" width="98" height="98">
+                <p>我们的微信</p>
+            </div>
+            <div>
+                <img src="__ROOT__/public/assets/images/erweima_weibo.png" width="98" height="98">
+                <P>我们的微博</P>
+            </div>
+        </div>
+        <div class="help">
+            点击图标进入帮助中心
+        </div>
+        <!--<div class="di-n">
+      <a href="javascript:scroll(0,0)"><i class="iconfont"></i></a>
+      </div>-->
+    </div>
+</div>
+
+
+<div class="confont-bottom3 clearfix">
+    <div class="confont-con">
+        <div class="pt-30 di-ib">
+            <img src="__ROOT__/public/assets/images/logo_bottom.png" width="300px">
+        </div>
+        <div class="pt-30 pull-right">
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=7">关于梦想</a></dt>
+                <dd><a href="#">资质荣耀</a></dd>
+                <dd><a href="/plus/list.php?tid=45">联系我们</a></dd>
+                <dd><a href="/plus/list.php?tid=44">招贤纳士</a></dd>
+            </dl>
+
+            <!--<dl class="bottom-list">
+                 <dt><a href="http://www.szcxmx.com/plus/list.php?tid=46">合作加盟</a></dt>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70802">合作优势</a></dd>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70803">合作流程</a></dd>
+                 <dd><a href="http://www.szcxmx.com/index.php?m=content&c=index&a=lists&catid=70805">伙伴查询</a></dd>
+             </dl>-->
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=4">支持中心</a></dt>
+                <dd><a href="/plus/list.php?tid=47">服务体系</a></dd>
+                <dd><a href="/plus/list.php?tid=49">知识中心</a></dd>
+                <dd><a href="/plus/list.php?tid=50">下载中心</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a >站点地图</a></dt>
+                <dd><a href="">TAG标签</a></dd>
+                <dd><a >RSS标签</a></dd>
+                <dd><a href="">专题列表</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=3">定制开发服务</a></dt>
+                <dd><a href="/plus/list.php?tid=8">软件定制开发</a></dd>
+                <dd><a href="/plus/list.php?tid=9">APP定制开发</a></dd>
+                <dd><a href="/plus/list.php?tid=10">微信/支付宝开发</a></dd>
+            </dl>
+            <dl class="bottom-list">
+                <dt><a href="/plus/list.php?tid=2">创新标准产品</a></dt>
+                <dd><a href="/plus/list.php?tid=2">软件标准产品</a></dd>
+                <dd><a href="/plus/list.php?tid=2">APP标准产品</a></dd>
+                <dd><a href="/plus/list.php?tid=2">VIP+免费软件</a></dd>
+            </dl>
+            <dl class="bottom-list  mr-0" id="bottomList">
+                <dd class="center">
+                    <a >
+                        <img src="__ROOT__/public/assets/images/weixin.png" width="15" class="pull-left mt-5">
+                        我们的微信
+                    </a>
+                    <div class="di-n">
+                        <img src="__ROOT__/public/assets/images/erweima.png" width="90">
+                        <p class="fsize-12">扫描关注微信</p>
+                    </div>
+                </dd>
+                <dd class="center">
+                    <a >
+                        <img src="__ROOT__/public/assets/images/weibo.png" width="15" height="14" class="pull-left mt-5">
+                        我们的微博
+                    </a>
+                    <div class="di-n">
+                        <img src="__ROOT__/public/assets/images/erweima_weibo.png" width="90">
+                        <p class="fsize-12">扫描微博交流</p>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="bottom-footer-pr">
+            <div class="confont-con lh-2em">
+                <span class="mr-30 fcolor-66 fsize-12">地址：深圳市宝安区西乡银田工业区元匠坊4楼</span><br/>
+                <span class="mr-30 fcolor-66 fsize-12">咨询热线：4000-670-790    0755-33150819</span><br/>
+                <span class="mr-30 fcolor-66 fsize-12">客服热线：18820152035</span>
+            </div>
+            <!--     <div class="hr-sb-gray1 mt-5 mb-5"></div> -->
+            <div class="confont-con lh-2em pt-10">
+                <p class="fcolor-66 fsize-12 di-i">Copyright © 2015-2018 CXMX Software Co.,Ltd All Rights Reserved <span class="fcolor-f4"><a href="http://admin.simpro.cn/sim_mana.php" target="_blank" rel="nofollow"><span class="fcolor-f4">管理入口</span></a></span>
+                </p>
+                <p class="fcolor-66  fsize-12">
+                    软件企业编号：粤B-2015-0305 | 中国电子商务协会会员 | 软件行业协会会员 | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备17038158号</a> |  <a href="http://www.cxmx90.com/plus/list.php?tid=3" target="_blank">软件定制开发</a> | <a href="http://www.cxmx90.com/" target="_blank">深圳软件开发</a>  |<a href="http://www.cxmx90.com/sitemap.html" target="_blank">网站地图</a> | <a href="http://www.cxmx90.com/sitemap.xml" target="_blank">XML地图</a>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 城市选择器 -->
+<script src="__ROOT__/public/assets/js/jquery-1.11.1.js"></script>
+<script src="__ROOT__/public/assets/js/jquery-1.8.3.min.js"></script>
+<script src="__ROOT__/public/assets/js/city.js"></script>
+<script src="__ROOT__/public/assets/js/jquery.autocomplete.js"></script>
+<script src="__ROOT__/public/assets/js/city_style.js"></script>
+
+<!-- 城市选择器end -->
+<script src="__ROOT__/public/assets/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="__ROOT__/public/assets/js/sp_homepage.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function()
+    {
+        $('#公司动态').addClass('active');
+    });
+</script>
+
+</body>
+</html>
