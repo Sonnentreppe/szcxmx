@@ -17,21 +17,27 @@ class Solution extends Frontend
 
     public function _initialize()
     {
-        parent::_initialize();
-        $list = \think\Db::name('solution_menu')->select();
-        $this->assign('list',$list);
-    }
-
-    public function index()
-    {
-//        循环输出所有类型的绝决方案的文章
+        //        循环输出所有类型的绝决方案的文章
         $article = new SolutionArticle();
         $list = \think\Db::name('solution_menu')->select();
         foreach ($list as $one=>$x){
             $list[$one]['child'] = $article->where('class',$x['id'])->select();
         }
         //dump($list);
-        $this->assign('data',$list);
+        $this->assign('list',$list);
+
+        $list = \think\Db::name('product_menu')->select();
+        foreach ($list as $one=>$o ){
+            $list[$one]['chlid'] = \think\Db::name('product_article')->where('pid_id',$o['id'])->select();
+        }
+        $this->assign('product_list',$list);
+        parent::_initialize();
+
+    }
+
+    public function index()
+    {
+
         return $this->view->fetch();
     }
 

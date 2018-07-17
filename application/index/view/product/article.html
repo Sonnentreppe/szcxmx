@@ -58,7 +58,7 @@
             <div class="pull-left po-re">
                 <ul class="nav">
 
-                    <li class="down"><a href="/plus/list.php?tid=1" title="解决方案">解决方案</a></li>
+                    <li class="down"><a href="{:url('Index/Solution/index')}" title="解决方案">解决方案</a></li>
 
                     <li class="down"><a href="/plus/list.php?tid=2" title="创新标准产品">创新标准产品</a></li>
 
@@ -79,46 +79,11 @@
                     <ul class="nav-down-list">
 
 
-
+                        {volist name="solution_list" id="l"}
                         <li class="pull-left">
-                            <a href="/plus/list.php?tid=19" title="综合集团">综合集团</a>
+                            <a href="{:url('Index/Solution/category',array('id'=>$l.id))}" title="{$l.name}">{$l.name}</a>
                         </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=21" title="制造行业">制造行业</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=25" title="服务行业">服务行业</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=27" title="金融行业">金融行业</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=26" title="IT&电子">IT&电子</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=20" title="政府与公共部门">政府与公共部门</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=22" title="文体教育">文体教育</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=23" title="交通运输">交通运输</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=24" title="商贸零售">商贸零售</a>
-                        </li>
-
-                        <li class="pull-left">
-                            <a href="/plus/list.php?tid=29" title="其它行业">其它行业</a>
-                        </li>
+                        {/volist}
 
 
                     </ul>
@@ -126,67 +91,18 @@
                     <ul class="nav-down-list nav-down-list2">
 
 
-                        <a href="/plus/list.php?tid=61" class=" h-20 lh-20 pl-5 mb-10 di-b" >
-                            <span class="hr-dl-yellow-4 pl-10 di-ib fsize-16 fcolor-white">软件标准产品</span>
+                        {volist name="list" id="li"}
+                        <a href="{:url('Index/Product/category',array('id'=>1))}" class=" h-20 lh-20 pl-5 mb-10 di-b" >
+                            <span class="hr-dl-yellow-4 pl-10 di-ib fsize-16 fcolor-white">{$li.name}</span>
                         </a>
 
-
+                        {volist name="li.chlid" id="c"}
                         <li class="pull-left">
                             <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0809/338.html" title="金融期货交易平台">金融期货交易平台</a>
+                            <a href="{:url('Index/Product/article',array('id'=>$c.id))}" title="{$c.name}">{$c.name}</a>
                         </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0709/63.html" title="大型接码平台">大型接码平台</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0714/286.html" title="ERP管理系统">ERP管理系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0713/285.html" title="OA协同办公系统">OA协同办公系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0714/311.html" title="CRM客户管理系统">CRM客户管理系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/gov/2017/0709/66.html" title="智能流量营销平台">智能流量营销平台</a>
-                        </li>
-
-
-
-                        <a href="/plus/list.php?tid=62" class=" h-20 lh-20 pl-5 pt-10 mb-10 clearfix di-b" >
-                            <span class="hr-dl-yellow-4 pl-10 di-ib fsize-16 fcolor-white">APP标准产品</span>
-                        </a>
-
-
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0720/316.html" title="互联网金融借贷APP">互联网金融借贷APP</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0720/318.html" title="网约车打车系统">网约车打车系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0720/319.html" title="网上商城系统">网上商城系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0720/320.html" title="聊天交友系统">聊天交友系统</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0714/287.html" title="共享单车系统APP">共享单车系统APP</a>
-                        </li>
-                        <li class="pull-left">
-                            <i class="iconfont fcolor-white"></i>
-                            <a href="/products/corp/2017/0720/317.html" title="团购外卖系统APP">团购外卖系统APP</a>
-                        </li>
+                        {/volist}
+                        {/volist}
 
                     </ul>
 

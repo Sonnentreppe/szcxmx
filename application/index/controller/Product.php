@@ -16,13 +16,25 @@ class Product extends Frontend
 
     public function _initialize()
     {
+        $list = \think\Db::name('solution_menu')->select();
+        $this->assign('solution_list',$list);
+
+        $list = \think\Db::name('product_menu')->select();
+        foreach ($list as $one=>$o ){
+            $list[$one]['chlid'] = \think\Db::name('product_article')->where('pid_id',$o['id'])->select();
+        }
+        $this->assign('list',$list);
+
         parent::_initialize();
+
 
     }
 
     public function index()
     {
 
+
+        //dump($list);
         return $this->view->fetch();
     }
 
@@ -33,6 +45,7 @@ class Product extends Frontend
     }
 
     public function category(){
+
         $id=Request::instance()->param('id');
         $list = \think\Db::name('product_menu')->select();
         foreach ($list as $one=>$o ){
@@ -47,6 +60,7 @@ class Product extends Frontend
 
     public function article()
     {
+
         $id = Request::instance()->param('id');
         $list = \think\Db::name('product_menu')->select();
         foreach ($list as $one=>$o ){

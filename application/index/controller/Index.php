@@ -22,6 +22,13 @@ class Index extends Frontend
     {
         $list = \think\Db::name('solution_menu')->select();
         $this->assign('list',$list);
+
+        $list = \think\Db::name('product_menu')->select();
+        foreach ($list as $one=>$o ){
+            $list[$one]['chlid'] = \think\Db::name('product_article')->where('pid_id',$o['id'])->select();
+        }
+        $this->assign('product_list',$list);
+
         return $this->view->fetch();
     }
 
