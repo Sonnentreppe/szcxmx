@@ -17,13 +17,14 @@ class Product extends Frontend
     public function _initialize()
     {
         $list = \think\Db::name('solution_menu')->select();
-        $this->assign('solution_list',$list);
+        $this->assign('list',$list);
 
         $list = \think\Db::name('product_menu')->select();
         foreach ($list as $one=>$o ){
             $list[$one]['chlid'] = \think\Db::name('product_article')->where('pid_id',$o['id'])->select();
         }
-        $this->assign('list',$list);
+        $this->assign('product_list',$list);
+
 
         parent::_initialize();
 

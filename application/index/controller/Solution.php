@@ -18,6 +18,7 @@ class Solution extends Frontend
     public function _initialize()
     {
         //        循环输出所有类型的绝决方案的文章
+
         $article = new SolutionArticle();
         $list = \think\Db::name('solution_menu')->select();
         foreach ($list as $one=>$x){
@@ -37,6 +38,13 @@ class Solution extends Frontend
 
     public function index()
     {
+        $article = new SolutionArticle();
+        $list = \think\Db::name('solution_menu')->select();
+        foreach ($list as $one=>$x){
+            $list[$one]['child'] = $article->where('class',$x['id'])->select();
+        }
+        //dump($list);
+        $this->assign('data',$list);
 
         return $this->view->fetch();
     }
